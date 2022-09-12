@@ -8,7 +8,7 @@ from utils import utils_image as util
 
 from models.network_rrdbnet import RRDBNet as net
 
-model_name = 'BSRGANx4'
+model_name = 'BSRGAN'
 scale_factor = 4
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
