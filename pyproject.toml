@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "bsrgan"
+description = ""
 version = "0.1.0"
+authors = []
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 requests = "^2.28.1"
 torchvision = "^0.13.1"
 opencv-python = "^4.6.0"
