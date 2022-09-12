@@ -28,6 +28,6 @@ if __name__ == '__main__':
         os.system(command)
         os.system('clear')
 
-    command = f"ffmpeg -framerate 30 -pattern_type glob -i '{out_pic_path}/*.png' -c:v libx264 -pix_fmt yuv420p {output_path}"
+    command = f"ffmpeg -framerate 15 -pattern_type glob -i '{out_pic_path}/*.png' -c:v libx264 -pix_fmt yuv420p {output_path}"
     print(command)
     os.system(command)
