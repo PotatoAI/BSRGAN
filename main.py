@@ -19,16 +19,17 @@ if __name__ == '__main__':
     utils_logger.logger_info('blind_sr_log', log_path='blind_sr_log.log')
     logger = logging.getLogger('blind_sr_log')
 
-    model_path = os.path.join('model_zoo', model_name+'.pth')
+    model_path = os.path.join('model_zoo', model_name + '.pth')
     logger.info('{:>16s} : {:s}'.format('Model Name', model_name))
 
-    logger.info('{:>16s} : {:<d}'.format('GPU ID', torch.cuda.current_device()))
+    logger.info('{:>16s} : {:<d}'.format('GPU ID',
+                                         torch.cuda.current_device()))
     torch.cuda.empty_cache()
 
     # --------------------------------
     # define network and load model
     # --------------------------------
-    model = net(in_nc=3, out_nc=3, nf=64, nb=23, gc=32, sf=scale_factor)  
+    model = net(in_nc=3, out_nc=3, nf=64, nb=23, gc=32, sf=scale_factor)
     model.load_state_dict(torch.load(model_path), strict=True)
     model.eval()
 
