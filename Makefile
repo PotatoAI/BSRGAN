@@ -11,3 +11,6 @@ mobel_zoo/BSRGAN.pth:
 
 process-video: mobel_zoo/BSRGAN.pth
 	$(POETRY) video.py input.mp4 output.mp4
+
+upscale: mobel_zoo/BSRGAN.pth
+	$(POETRY) main.py input.png output.png
