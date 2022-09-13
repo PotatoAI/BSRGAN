@@ -9,8 +9,11 @@ download-BSRGAN-models:
 mobel_zoo/BSRGAN.pth:
 	$(MAKE) download-BSRGAN-models
 
-process-video: mobel_zoo/BSRGAN.pth
+process-video: poetry-install mobel_zoo/BSRGAN.pth
 	$(POETRY) video.py input.mp4 output.mp4
 
-upscale: mobel_zoo/BSRGAN.pth
+upscale: poetry-install mobel_zoo/BSRGAN.pth
 	$(POETRY) main.py input.png output.png
+
+poetry-install:
+	poetry install
