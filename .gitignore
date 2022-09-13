@@ -10,3 +10,6 @@ __pycache__/
 # logs
 *.log
 model_zoo/
+*.png
+*.mp4
+tmp/
