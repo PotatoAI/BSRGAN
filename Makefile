@@ -15,6 +15,9 @@ process-video:
 upscale:
 	$(POETRY) main.py input.png output.png
 
+upscale-jpg:
+	$(POETRY) main.py input.jpg output.jpg
+
 poetry-install:
 	poetry install
 

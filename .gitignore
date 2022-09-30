@@ -11,5 +11,7 @@ __pycache__/
 *.log
 model_zoo/
 *.png
+*.jpg
+*.jpeg
 *.mp4
 tmp/
